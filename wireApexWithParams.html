@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="wireApexWithParams">
+    <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Type"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+            <template if:true={accountRecords.data}>
+
+                <template for:each={accountRecords.data} for:item='accRecords'>
+                    <div key={accRecords.Id} class="slds-m-bottom_medium">
+                        <p>{accRecords.Name}</p>
+                        <p>{accRecords.Phone}</p>
+                        <p>{accRecords.Industry}</p>
+                    </div>
+                </template>
+
+            </template>
+     </lightning-card>
+        
+</template>
