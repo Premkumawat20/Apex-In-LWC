@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium">
+            <template if:true={accountRecords.data}>
+                <template for:each={accountRecords.data} for:item="account">
+                    <div key={account.Id} class="slds-m-bottom_medium">
+                        <p>{account.Name}</p>
+                        <p>{account.Phone}</p>
+                        <p>{account.Industry}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
